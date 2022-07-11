@@ -1,24 +1,19 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
-import {useAuth} from "../hooks/use-auth"
-import {IUseAuth} from "../hooks/use-auth"
+import {useAppDispatch} from "../hooks/redux-hooks"
+import {setUser} from "../store/userSlice"
 
 interface ILoginFormProp {
     title: string
 }
 
 const LoginForm: React.FC<ILoginFormProp> = ({title}) => {
+    const dispatch = useAppDispatch()
     const navigate = useNavigate()
-    const hookUseAuth = useAuth
     const [email, setEmail] = useState('')
 
     const [password, setPassword] = useState('')
-    const [userFirebase, setUserFirebase] = useState({} as IUseAuth)
-
-    useEffect(() => {
-        hookUseAuth(userFirebase)
-    }, [userFirebase])
 
     const handleLogin = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
@@ -28,9 +23,11 @@ const LoginForm: React.FC<ILoginFormProp> = ({title}) => {
             .then((userCredential) => {
                 const res = userCredential.user
 
-                localStorage.setItem('user', JSON.stringify(res))
-
-                setUserFirebase(res)
+                dispatch(setUser({
+                    email: res.email,
+                    id: res.uid,
+                    token: res.refreshToken,
+                }))
 
                 navigate("/", { replace: true })
             })

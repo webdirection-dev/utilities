@@ -1,16 +1,12 @@
-export interface IUseAuth {
-    email: string | null;
-    accessToken?: string;
-    uid: string;
+import {useAppSelector} from "./redux-hooks"
 
-}
-
-export const useAuth = ({email, accessToken, uid}: IUseAuth) => {
+export const useAuth = () => {
+    const {email, token, id} = useAppSelector(state => state.userReducer)
 
     return {
         isAuth: !!email,
         email,
-        token: accessToken,
-        id: uid,
+        token,
+        id,
     }
 }
