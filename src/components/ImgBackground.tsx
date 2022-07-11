@@ -1,5 +1,5 @@
 import React from "react"
-import {useBg} from "../../hooks/use-bg"
+import {useBg} from "../hooks/use-bg"
 
 const ImgBackground: React.FC = () => {
     const {className, src} = useBg()

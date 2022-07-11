@@ -1,8 +1,8 @@
 import React from "react"
 import './login.scss'
 
-import ImgBackground from "../../components/imgBackground/ImgBackground"
-import LoginForm from "./LoginForm"
+import ImgBackground from "../../components/ImgBackground"
+import LoginForm from "../../components/LoginForm"
 
 const Login: React.FC = () => {
     return(
@@ -12,11 +12,11 @@ const Login: React.FC = () => {
 
                 <div className="content">
                     <div className="welcome">
-                        <h1 className="title">Login page</h1>
-                        <h3 className="subtitle">Welcome to the Admin panel</h3>
+                        <h1 className="title">Страница входа</h1>
+                        <h3 className="subtitle">Добро пожаловать в раздел платежей</h3>
                     </div>
 
-                    <LoginForm />
+                    <LoginForm title='Войти'/>
                 </div>
             </div>
         </div>

@@ -12,6 +12,7 @@
       <list>
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -27,7 +28,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/admin/Development/courses/utilities",
+    "last_opened_file_path": "/Users/admin/Development/courses/utilities/src/pages",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -38,12 +39,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/static-data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/configs" />
+      <recent name="$PROJECT_DIR$/src/static-data" />
       <recent name="$PROJECT_DIR$/src/hooks" />
     </key>
   </component>
@@ -71,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657436389358</updated>
       <workItem from="1657436392766" duration="3536000" />
+      <workItem from="1657519846261" duration="15639000" />
     </task>
     <servers />
   </component>
@@ -79,5 +84,6 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".gitignore" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>

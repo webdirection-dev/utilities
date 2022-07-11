@@ -1,9 +1,18 @@
 import React from "react"
+import {useBgMain} from "./use-bg-main"
+import './main.scss'
 
 const Main: React.FC = () => {
 
+    const {className, bgStyle} = useBgMain()
+
     return(
-        <h1>Test</h1>
+        <div
+            className={'main ' + className}
+            style={{
+                background: `${bgStyle}`,
+            }}
+        >Main</div>
     )
 }
 
