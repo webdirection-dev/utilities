@@ -2,8 +2,9 @@ import React from "react"
 import {useBgMain} from "./use-bg-main"
 import './main.scss'
 
-const Main: React.FC = () => {
+import CardList from "../../components/cardList/CardList"
 
+const Main: React.FC = () => {
     const {className, bgStyle} = useBgMain()
 
     return(
@@ -12,7 +13,9 @@ const Main: React.FC = () => {
             style={{
                 background: `${bgStyle}`,
             }}
-        >Main</div>
+        >
+            <CardList />
+        </div>
     )
 }
 

@@ -1,8 +1,8 @@
 import React from "react"
 import './login.scss'
 
-import ImgBackground from "../../components/ImgBackground"
-import LoginForm from "../../components/LoginForm"
+import ImgBackground from "../../components/imgBackground/ImgBackground"
+import LoginForm from "../../components/loginForm/LoginForm"
 
 const Login: React.FC = () => {
     return(

@@ -7,7 +7,7 @@ import NotFond from "./pages/notFound/NotFond"
 import {useAuth} from "./hooks/use-auth"
 
 function App() {
-    const {isAuth, email} = useAuth()
+    const {isAuth} = useAuth()
 
     return (
         <div className="App">

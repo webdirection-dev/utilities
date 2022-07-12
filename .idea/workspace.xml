@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -45,10 +45,11 @@
       <recent name="$PROJECT_DIR$/src/static-data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/imgBackground" />
+      <recent name="$PROJECT_DIR$/src/components/loginForm" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/configs" />
       <recent name="$PROJECT_DIR$/src/static-data" />
-      <recent name="$PROJECT_DIR$/src/hooks" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -77,6 +78,7 @@
       <workItem from="1657436392766" duration="3536000" />
       <workItem from="1657519846261" duration="15639000" />
       <workItem from="1657537658387" duration="3622000" />
+      <workItem from="1657606438634" duration="22961000" />
     </task>
     <servers />
   </component>
