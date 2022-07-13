@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 
-import {setUser} from "../../store/userSlice"
+import {setAuth} from "../../features/auth/authSlice"
 import {useAppDispatch} from "../../hooks/redux-hooks"
 import {useNavigate} from "react-router-dom"
 
@@ -21,7 +21,7 @@ export const useLoginForm = () => {
                 setIsFetching(true)
                 const res = userCredential.user
 
-                dispatch(setUser({
+                dispatch(setAuth({
                     email: res.email,
                     id: res.uid,
                     token: res.refreshToken,

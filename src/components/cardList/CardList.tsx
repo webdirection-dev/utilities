@@ -1,18 +1,30 @@
 import React from "react"
 import './cardList.scss'
 
-import CardItem from "../cardItem/CardItem"
-
 import {invoices} from "../../static-data/invoices"
 
-const CardList: React.FC = () => {
+import CardItem from "../cardItem/CardItem"
 
+import {MdCheckCircle} from "react-icons/md"
+
+interface ICardListProp {
+    location: string;
+}
+
+const CardList: React.FC<ICardListProp> = ({location}) => {
     return(
-        <ul className="cardList">
-            {invoices.ulyanovskaya.map(i => {
-                return <CardItem key={i.inn} {...i}/>
-            })}
-        </ul>
+        <div className='content'>
+            <div className="location">
+                {location.toUpperCase()}
+                <MdCheckCircle />
+            </div>
+
+            <ul className="cardList">
+                {invoices.ulyanovskaya.map(i => {
+                    return <CardItem key={i.account} {...i}/>
+                })}
+            </ul>
+        </div>
     )
 }
 

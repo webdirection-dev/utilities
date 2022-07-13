@@ -8,7 +8,7 @@ interface IPropItemCard {
 }
 
 const CardItem: React.FC<IPropItemCard> = (props) => {
-    const {name, inn, account, paymentDay } = props
+    const {name, inn, account, paymentDay, amount } = props
     const {footerTxt, handleClickInn, animationInn, animationAccount} = useCardDate(paymentDay as number)
 
     return(
@@ -34,6 +34,10 @@ const CardItem: React.FC<IPropItemCard> = (props) => {
                     >ЛС: <span>{account}</span></div>
 
                     <div className={'popUp' + animationAccount}><p>ЛС cкопирован...</p></div>
+                </div>
+
+                <div className="content">
+                    <div className='monitor sum'>СУММА: <span>{amount}</span></div>
                 </div>
             </div>
 

@@ -1,0 +1,44 @@
+.nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    z-index: 9;
+
+    .navBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 210px;
+        color: mediumblue;
+        background-color: #bae1ff;
+        font-size: 24px;
+        font-weight: 600;
+        border: none;
+        padding: 5px 15px;
+        cursor: pointer;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
+
+        &.left {
+            border-radius: 0 10px 10px 0;
+        }
+
+        &.right {
+            border-radius: 10px 0 0 10px;
+        }
+
+        svg {
+            font-size: 32px;
+        }
+    }
+
+    .disable {
+        color: #88ccff;
+        //opacity: 0;
+        //cursor: default;
+    }
+}
+
+

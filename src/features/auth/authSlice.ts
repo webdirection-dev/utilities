@@ -6,11 +6,11 @@ const initialState = {
     id: '',
 }
 
-const userSlice = createSlice({
-    name: 'user',
+const authSlice = createSlice({
+    name: 'auth',
     initialState,
     reducers: {
-        setUser(state, action) {
+        setAuth(state, action) {
             state.email = action.payload.email;
             state.token = action.payload.token;
             state.id = action.payload.id;
@@ -18,5 +18,5 @@ const userSlice = createSlice({
     },
 })
 
-export const {setUser} = userSlice.actions
-export default userSlice.reducer
+export const {setAuth} = authSlice.actions
+export default authSlice.reducer

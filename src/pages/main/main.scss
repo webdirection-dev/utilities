@@ -1,5 +1,21 @@
 .main {
+    position: relative;
     min-height: 100vh;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        width: 100vw;
+        margin-top: 30px;
+    }
+
+    .slide-left {
+        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    .slide-right {
+        animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
 
     //&.loading {
     //    filter: blur(10px);
@@ -9,4 +25,22 @@
     //    filter: blur(0);
     //    transition: filter 0.3s linear;
     //}
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }

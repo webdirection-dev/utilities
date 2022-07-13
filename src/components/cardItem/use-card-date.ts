@@ -13,7 +13,7 @@ export const useCardDate = (paymentDay: number) => {
             copyTxt = target.textContent.split(':')[1].trim()
         } else copyTxt = target.textContent
 
-        if (copyTxt !== null) navigator.clipboard.writeText(copyTxt)
+        if (copyTxt !== null) navigator.clipboard.writeText(copyTxt.split(' ').join(''))
 
         if (target.id === 'inn' || (target.parentElement !== null && target.parentElement.id === 'inn')) {
             setAnimationInn(' animationRight')
