@@ -3,30 +3,35 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-top: 20px;
+    //padding-top: 20px;
     z-index: 9;
 
     .navBtn {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 210px;
-        color: mediumblue;
+        width: 48%;
+        color: teal;
         background-color: #bae1ff;
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 18px;
         border: none;
-        padding: 5px 15px;
+        padding: 10px 15px;
         cursor: pointer;
         -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
 
+        @media (min-width: 576px) {
+            width: 210px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
         &.left {
-            border-radius: 0 10px 10px 0;
+            border-radius: 0 0 10px 0;
         }
 
         &.right {
-            border-radius: 10px 0 0 10px;
+            border-radius: 0 0 0 10px;
         }
 
         svg {

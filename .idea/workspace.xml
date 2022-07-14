@@ -45,11 +45,11 @@
       <recent name="$PROJECT_DIR$/src/static-data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/features/location" />
       <recent name="$PROJECT_DIR$/src/components/imgBackground" />
       <recent name="$PROJECT_DIR$/src/components/loginForm" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/configs" />
-      <recent name="$PROJECT_DIR$/src/static-data" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -80,6 +80,8 @@
       <workItem from="1657537658387" duration="3622000" />
       <workItem from="1657606438634" duration="22961000" />
       <workItem from="1657694221512" duration="17357000" />
+      <workItem from="1657780229278" duration="9116000" />
+      <workItem from="1657794493245" duration="299000" />
     </task>
     <servers />
   </component>

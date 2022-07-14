@@ -2,7 +2,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     isUlyanovskaya: true,
-    isOstrovskogo: false,
+    isUlyanovskayaOpacity: false,
+    isOstrovskogoOpacity: false,
 }
 
 const locationSlice = createSlice({
@@ -12,16 +13,26 @@ const locationSlice = createSlice({
         setLocation(state, action) {
             if (action.payload === 'ul') {
                 state.isUlyanovskaya = true
-                state.isOstrovskogo = false
             }
 
             if (action.payload === 'ost') {
                 state.isUlyanovskaya = false
-                state.isOstrovskogo = true
             }
-        }
+        },
+
+        setOpacity(state, action) {
+            if (action.payload === 'ul') {
+                state.isUlyanovskayaOpacity = true
+                state.isOstrovskogoOpacity = false
+            }
+
+            if (action.payload === 'ost') {
+                state.isUlyanovskayaOpacity = false
+                state.isOstrovskogoOpacity = true
+            }
+        },
     }
 })
 
-export const {setLocation} = locationSlice.actions
+export const {setLocation, setOpacity} = locationSlice.actions
 export default locationSlice.reducer

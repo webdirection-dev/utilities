@@ -3,26 +3,29 @@ import './cardList.scss'
 
 import {invoices} from "../../static-data/invoices"
 
-import CardItem from "../cardItem/CardItem"
+import CardItem from "../../components/cardItem/CardItem"
 
 import {MdCheckCircle} from "react-icons/md"
+import {useAnimationCardList} from "./use-animation-cardList"
 
 interface ICardListProp {
     location: string;
 }
 
 const CardList: React.FC<ICardListProp> = ({location}) => {
+    const {animation} = useAnimationCardList(location)
+
+    const data = location === 'ульяновская' ? invoices.ulyanovskaya : invoices.ostrovskogo
+
     return(
-        <div className='content'>
+        <div className={'content ' + animation}>
             <div className="location">
                 {location.toUpperCase()}
                 <MdCheckCircle />
             </div>
 
             <ul className="cardList">
-                {invoices.ulyanovskaya.map(i => {
-                    return <CardItem key={i.account} {...i}/>
-                })}
+                {data.map(i => <CardItem key={i.account} {...i}/>)}
             </ul>
         </div>
     )
